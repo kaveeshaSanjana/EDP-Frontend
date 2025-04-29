@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="text-end">
+        <button type="button" routerLink="/product/add" class="btn bg-success btn text-end text-white">Add</button>
+    </div>
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table caption-top">
+                <caption>Employees</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">email</th>
+                        <th scope="col">Department</th>
+                        <th scope="col">Update</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let e of employees">
+                        <td>{{ e.name }}</td>
+                        <td scope="row">{{ e.email }}</td>
+                        <td >{{ e.department }}</td>
+                        <td ><button class="bg-warning p-1 rounded-1 ">Update</button></td>
+                        <td ><button class="bg-danger p-1 rounded-1 text-white ">Delete</button></td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
