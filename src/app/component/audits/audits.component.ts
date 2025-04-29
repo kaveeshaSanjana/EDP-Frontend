@@ -1,19 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { EmployeeService } from '../../../../service/employeeService';
 import Swal from 'sweetalert2';
-import Employee from '../../../../model/Employee';
+import { EmployeeService } from '../../service/employeeService';
+import Employee from '../../model/Employee';
 
 @Component({
-  selector: 'app-user-view',
+  selector: 'app-audits',
   standalone: true,
-  imports: [RouterLink, NgFor, NgIf, FormsModule],
-  templateUrl: './user-view.component.html',
-  styleUrls: ['./user-view.component.css']
+  imports: [NgFor, NgIf, FormsModule],
+  templateUrl: './audits.component.html',
+  styleUrls: ['./audits.component.css']
 })
-export class UserViewComponent implements OnInit {
+export class AuditsComponent implements OnInit {
 
   constructor(private employeeService: EmployeeService) {}
 
@@ -30,7 +29,7 @@ export class UserViewComponent implements OnInit {
     });
   }
 
-  public delete(id: any): void {
+  public delete(id: number): void {
     this.employeeService.deleteEmployee(id).subscribe({
       next: () => {
         Swal.fire({
@@ -60,4 +59,3 @@ export class UserViewComponent implements OnInit {
     );
   }
 }
-
