@@ -6,7 +6,7 @@ import { UserCreateComponent } from "./component/dashboard/user-page/user-create
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SideBarComponent, UserViewComponent, UserCreateComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

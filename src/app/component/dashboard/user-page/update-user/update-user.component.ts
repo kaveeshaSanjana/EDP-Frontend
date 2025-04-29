@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../../../../service/employeeService';
 import Employee from '../../../../model/Employee';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-update-user',
-  imports: [FormsModule],
+  imports: [FormsModule , RouterLink],
   templateUrl: './update-user.component.html',
   styleUrl: './update-user.component.css'
 })
